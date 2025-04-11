@@ -1,0 +1,51 @@
+mkdir Songs
+mkdir Music
+ls
+cd Music
+rmdir Songs
+mkdir Downloads
+cd Downloads
+mkdir CS112
+cd CS112
+mkdir CS110
+cd CS110
+mkdir CS111
+cd ..
+cd /Downloads/CS112/CS110/CS111/../CS111
+pwd
+cd ..
+cd .. 
+create puppies.txt
+i like puppies a lot~
+cat puppies.txt
+create surf.txt
+i surf~
+cat surf.txt
+mkdir Photos
+mkdir Videos
+cd Videos
+create videos.txt
+yeah~
+create video2.txt
+yay!~
+create photos.txt
+yes~
+cd ..
+cd Photos
+create photos.txt
+here are some pics~
+mkdir Edits
+cd .. 
+ls
+du
+cd ..
+cd ..
+cd Downloads
+find Videos
+find Photos
+cd Photos
+cd ..
+ls
+find photos.txt
+exit
+

@@ -1,0 +1,5 @@
+create puppies.txt
+i love puppies~
+cat puppies.txt
+du
+ls

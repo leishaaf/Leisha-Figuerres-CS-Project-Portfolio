@@ -1,0 +1,367 @@
+Leisha Figuerres
+CS112
+4 December 2024
+Final Draft of Project03 Writeup
+Part 1 Section:
+For part one of project 3, I tested my program by creating two files that split the commands somewhat in half and created files to document the outputs of those files. One version of the output files was with debugger statements, and the other was without them. By doing so I tested input file redirection with the files I had created and tested scenarios where all the distinct commands had the valid number of arguments ( the ones that needed a file name ) and where they didn’t. I also tested where an invalid command was inputted, empty lines, and having multiple commands. My program itself has a method to validate if there’s a filename for the commands that need it and is called each time one of those commands is found. 
+Test.txt - Tested commands create filename, cat filename, rm filename, mkdir directory, rmdir directory
+Beginning of File
+create puppies.txt
+create 
+cat yourmom.txt
+cat 
+rm 
+rm yessah.txt
+mkdir
+mkdir Downloads
+rmdir CS112
+rmdir 
+rmdir
+End file 
+Output1.txt ( with debugger statements ) 
+Beginning of File
+prompt> Command create received
+prompt> ERROR command create  needs a filename or directory to perform command on!
+prompt> Command cat received
+prompt> ERROR command cat  needs a filename or directory to perform command on!
+prompt> ERROR command rm  needs a filename or directory to perform command on!
+prompt> Command rm received
+prompt> ERROR command mkdir needs a filename or directory to perform command on!
+prompt> Command mkdir received
+prompt> Command rmdir received
+prompt> ERROR command rmdir  needs a filename or directory to perform command on!
+End file 
+Test.txt (with multiple commands in last line and no debugger statements)
+Beginning of File
+create puppies.txt
+create 
+cat yourmom.txt
+cat 
+rm 
+rm yessah.txt
+mkdir
+mkdir Downloads
+rmdir CS112
+rmdir 
+rmdir rmdir mkdir
+End file 
+Output1after.txt ( without debugger statements ) 
+Beginning of File
+prompt> 
+prompt> ERROR command needs a filename or directory to perform command on!
+prompt> 
+prompt> ERROR command needs a filename or directory to perform command on!
+prompt> ERROR command needs a filename or directory to perform command on!
+prompt> 
+prompt> ERROR command needs a filename or directory to perform command on!
+prompt> 
+prompt> 
+prompt> ERROR command needs a filename or directory to perform command on!
+prompt> 
+End file 
+test2.txt - tested commands cd, ls, pwd, find name, exit, scenario of empty lines, scenario of bad input
+Beginning of File
+cd
+cd CS111
+ls
+s
+
+
+
+
+du
+
+
+pdw
+
+
+pwd
+
+
+find
+find puppies.txt
+
+
+exit
+
+
+End file 
+Output2.txt (with debugger statements)
+Beginning of File 
+prompt> ERROR command cd needs a filename or directory to perform command on!
+prompt> Command cd received
+prompt> ls command received
+prompt> ERROR invalid command name
+prompt> 
+prompt> 
+prompt> du command received
+prompt> 
+prompt> ERROR invalid command name
+prompt> 
+prompt> pwd command received
+prompt> 
+prompt> ERROR command find needs a filename or directory to perform command on!
+prompt> Command find received
+prompt> 
+prompt> exit command received, program terminating
+End file
+Output2after.txt (without debugger statements)
+Beginning of File 
+prompt> ERROR command cd needs a filename or directory to perform command on!
+prompt> 
+prompt> 
+prompt> ERROR invalid command name
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+prompt> ERROR invalid command name
+prompt> 
+prompt> 
+prompt> 
+prompt> ERROR command find needs a filename or directory to perform command on!
+prompt> 
+prompt> 
+prompt>
+End file  
+Part 2 Section:
+        For part two of the program, I focused on the transversal of the tree so that the commands could be executed properly. Part one mainly tested initial valid user inputs, this time I focused on when commands where entered correctly. I first began by starting on the cd and create file name commands. Many of the commands revolved around the current directory so once I got a good foundation for its function and execution, I began moving down the list of the rest of the commands. It took a lot of trial and error. I used input file redirection to test my project while improving and building all my commands and at the very end I tried it with my own user input live. 
+	For part two the most important thing I worked on was being able to transverse correctly through the tree so that for all of the methods, I could correctly execute the commands. I did this by using simple test cases with files and would improve them to be more complicated to handle edge cases. I would also keep a list of problems I was running into or things I needed to complete along with documentation of my inputs and outputs that gave those errors. I used this documentation and saved inputs to chip away at issues until they were gone. Some issues included a concurrent exception which happened when I would start traversing from the root directory when I really should’ve started at the current directory. Others include the user being able to add content to a file, not correctly handling multiple paths in cd, and not correctly traversing through tree for find name command. After I was able to successfully execute all the commands and their edge cases I thought of, I removed the debugger statements and tested for the last times.
+Here are some examples of the test cases I used:
+Remove.txt - Tested majority of commands but focused on testing transversal through the tree with commands like cd, mkdir, ls,find, du, and pwd (which was indirectly tested each time find command was called). Highlighted Cases: multiple paths in cd, subdirectories within subdirectories, files within those subdirectories
+Input
+Beginning File 
+mkdir Songs
+mkdir Music
+ls
+cd Music
+rmdir Songs
+mkdir Downloads
+cd Downloads
+mkdir CS112
+cd CS112
+mkdir CS110
+cd CS110
+mkdir CS111
+cd ..
+cd /Downloads/CS112/CS110/CS111/../CS111
+pwd
+cd ..
+cd .. 
+create puppies.txt
+i like puppies a lot~
+cat puppies.txt
+create surf.txt
+i surf~
+cat surf.txt
+mkdir Photos
+mkdir Videos
+cd Videos
+create videos.txt
+yeah~
+create video2.txt
+yay!~
+create photos.txt
+yes~
+cd ..
+cd Photos
+create photos.txt
+here are some pics~
+mkdir Edits
+cd .. 
+ls
+du
+cd ..
+cd ..
+cd Downloads
+find Videos
+find Photos
+cd Photos
+cd ..
+ls
+find photos.txt
+exit
+End File
+
+Output - with debugger statements
+Beginning File 
+prompt> Command mkdir Songs received
+prompt> Command mkdir Music received
+prompt> 
+Music (*)
+Songs (*)
+prompt> Command cd Music received
+AFTER CURRENT DIR Music
+prompt> Command rmdir Songs received
+ERROR directory doesn't exist
+prompt> Command mkdir Downloads received
+prompt> Command cd Downloads received
+AFTER CURRENT DIR Downloads
+prompt> Command mkdir CS112 received
+prompt> Command cd CS112 received
+AFTER CURRENT DIR CS112
+prompt> Command mkdir CS110 received
+prompt> Command cd CS110 received
+AFTER CURRENT DIR CS110
+prompt> Command mkdir CS111 received
+prompt> Command cd .. received
+AFTER CURRENT DIR CS112
+prompt> Command cd /Downloads/CS112/CS110/CS111/../CS111 received
+AFTER CURRENT DIR CS111
+prompt> 
+/Music/Downloads/CS112/CS110/CS111
+prompt> Command cd .. received
+AFTER CURRENT DIR CS110
+prompt> Command cd ..  received
+AFTER CURRENT DIR CS112
+prompt> Command create puppies.txt received
+prompt> Command cat puppies.txt received
+i like puppies a lot
+prompt> Command create surf.txt received
+prompt> Command cat surf.txt received
+i surf
+prompt> Command mkdir Photos received
+prompt> Command mkdir Videos received
+prompt> Command cd Videos received
+AFTER CURRENT DIR Videos
+prompt> Command create videos.txt received
+prompt> Command create video2.txt received
+prompt> Command create photos.txt received
+prompt> Command cd .. received
+AFTER CURRENT DIR CS112
+prompt> Command cd Photos received
+AFTER CURRENT DIR Photos
+prompt> Command create photos.txt received
+prompt> Command mkdir Edits received
+prompt> Command cd ..  received
+AFTER CURRENT DIR CS112
+prompt> 
+CS110 (*)
+Photos (*)
+Videos (*)
+puppies.txt
+surf.txt
+prompt> 
+55
+prompt> Command cd .. received
+AFTER CURRENT DIR Downloads
+prompt> Command cd .. received
+AFTER CURRENT DIR Music
+prompt> Command cd Downloads received
+AFTER CURRENT DIR Downloads
+prompt> Command find Videos received
+/Music/Downloads/CS112/Videos
+prompt> Command find Photos received
+/Music/Downloads/CS112/Photos
+prompt> Command cd Photos received
+AFTER CURRENT DIR Photos
+prompt> Command cd .. received
+AFTER CURRENT DIR CS112
+prompt> 
+CS110 (*)
+Photos (*)
+Videos (*)
+puppies.txt
+surf.txt
+prompt> Command find photos.txt received
+/Music/Downloads/CS112/Photos/photos.txt
+/Music/Downloads/CS112/Videos/photos.txt
+prompt> 
+End File
+
+Simple.txt - Mainly tested the first half of the commands but its purpose was to test create file, cat file, and du the most. I was having trouble getting the contents to be created by the user and this file helped me fix my errors. 
+Input
+Beginning File 
+mkdir Downloads
+cd Downloads
+mkdir CS112
+cd CS112
+mkdir CS110
+cd CS110
+mkdir CS111
+mkdir Alpha
+mkdir Beta
+create puppies.txt
+yay~
+cat puppies.txt
+create songs
+hhi~
+create photos
+oops!~
+cd Downloads
+ls
+pwd
+du
+End File
+
+
+Ouput (without debugger statements)
+Beginning File 
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+prompt> 
+yay
+prompt> 
+prompt> 
+prompt> 
+ERROR invalid path
+prompt> 
+Alpha (*)
+Beta (*)
+CS111 (*)
+photos
+puppies.txt
+songs
+prompt> 
+/Downloads/CS112/CS110
+prompt> 
+11
+End File 
+
+Live Input from user: Tested basic commands and functionality of the file system itself to confirm everything was in order before turning in.
+MacBook-Air-4:src leisha$ java FileSys
+mkdir yessah
+prompt> 
+cd yessah
+prompt> 
+cd ..
+prompt> 
+ls
+prompt> 
+yessah (*)
+cd /yessah
+prompt> 
+ls
+prompt> 
+mkdir hey
+prompt> 
+create file
+prompt> 
+yay~
+i love you
+prompt> ERROR invalid command name
+cat file
+prompt> 
+yay
+find yay
+prompt> 
+ls
+prompt> 
+file
+hey (*)
+find file
+prompt> 
+/yessah/file
+du
+prompt> 
+3
+exit
+prompt>

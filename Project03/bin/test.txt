@@ -1,0 +1,24 @@
+create puppies.txt
+create 
+cat yourmom.txt
+cat puppies.txt
+rm 
+rm puppies.txt
+rm yessah.txt
+rm puppies.txt
+mkdir
+mkdir Downloads
+cd Downloads
+mkdir CS112
+cd CS112
+mkdir CS110
+cd CS110
+mkdir CS111
+mkdir 
+cd ..
+cd /Downloads/CS112/CS110/CS111
+rmdir CS112
+rmdir 
+cd Downloads
+rmdir Downloads
+rmdir rmdir mkdir

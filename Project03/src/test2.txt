@@ -1,0 +1,16 @@
+cd
+cd CS111
+ls
+s
+
+
+du
+
+pdw
+
+pwd
+
+find
+find puppies.txt
+
+exit

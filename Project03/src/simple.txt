@@ -1,0 +1,20 @@
+mkdir Downloads
+cd Downloads
+mkdir CS112
+cd CS112
+mkdir CS110
+cd CS110
+mkdir CS111
+mkdir Alpha
+mkdir Beta
+create puppies.txt
+yay~
+cat puppies.txt
+create songs
+hhi~
+create photos
+oops!~
+cd Downloads
+ls
+pwd
+du
