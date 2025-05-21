@@ -63,3 +63,4 @@ Built during **DonsHack25**, this project empowers the USF community to give and
 - Fail: Explanation of why request/donation failed and link to try again.
 
 ---
+NOTES: I came up with the idea for my team and created Page 4 (Donate a Meal/Snack).
