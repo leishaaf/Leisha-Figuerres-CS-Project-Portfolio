@@ -15,7 +15,7 @@ Backend: Python (Flask), Java, Node.js (learning)
 Frontend: HTML, CSS, JavaScript (learning React)  
 Other: Git, SQL, Spotify API, Flask Sessions, FuzzyWuzzy, VS Code  
 
-Email: leisha.figuerres@yahoo.com
+Email: leisha.figuerres@yahoo.com  
 LinkedIn: www.linkedin.com/in/leisha-figuerres-862096347
 
 
