@@ -1,8 +1,7 @@
 ## Project 2
-In this project, you will implement a dictionary using a compact prefix tree.
-Please see the description on Canvas.
-Design your own
-algorithm and describe it in the Readme.
+In this project, I implement a dictionary using a compact prefix tree in Java.
+
+Below is a description for the algorithm behind the suggest() method:
 
 In my suggest(), I have an array that holds the worsd to be returned ( length = numSuggestions).
 It first checks if the target word is a word in the dictionary, and if so, it creates a new array of length one with just the target word and returns it. 
