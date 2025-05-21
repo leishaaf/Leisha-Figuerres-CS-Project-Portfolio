@@ -1,5 +1,5 @@
-👋 Hello, my name Leisha Figuerres!  
-🎓 I'm a rising junior majoring in Computer Science at the University of San Francisco.  
+Hello, my name is Leisha Figuerres!  
+🎓 I am a rising junior majoring in Computer Science at the University of San Francisco.  
 💻 Aspiring full-stack software engineer with a strong foundation in backend development and a growing passion for frontend and UX/UI.  
 🌺 Currently open to remote, hybrid opportunities, or on site opportunites — especially ones that value ethical tech, creativity, and experimentation.    
 
