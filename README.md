@@ -1,4 +1,16 @@
-# projects
-Here are some projects I've completed in java, python, and js.
-There are more in previous repositories for various classes.
+👋 Hello, my name Leisha Figuerres!
+🎓 I'm a rising junior majoring in Computer Science at the University of San Francisco.
+💻 Aspiring full-stack software engineer with a strong foundation in backend development and a growing passion for frontend and UX/UI.
+🌺 Currently open to remote, hybrid opportunities, or on site opportunites — especially ones that value ethical tech, creativity, and experimentation.
 
+🚀 What I’m Working On
+Learning React and Node.js by building my own full-stack projects
+
+Diving deeper into ethical AI, human-centered design, and experimental tech
+
+Exploring more about APIs, database integration, and collaborative tools
+
+🛠️ Languages & Tools
+Backend: Python (Flask), Java, Node.js (learning)
+Frontend: HTML, CSS, JavaScript (learning React)
+Other: Git, SQL, Spotify API, Flask Sessions, FuzzyWuzzy, VS Code
