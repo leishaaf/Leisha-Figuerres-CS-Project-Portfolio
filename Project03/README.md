@@ -1,7 +1,7 @@
 Mock File System
 ---
 In the program, I implement a model of a computers file system using recursion and trees.   
-The program stores and manipulates files and directories as MacOS or Window's file system would.
+The program stores and manipulates files and directories as MacOS or Window's file system would.  
 Here is a list of the following commands you can enter through scanner:  
 - create fileName: creates a new file and reads characters from keyboard input saving it to the "file" until it contains a '~' char
 - cat fileName: prints all the contents of the given file
