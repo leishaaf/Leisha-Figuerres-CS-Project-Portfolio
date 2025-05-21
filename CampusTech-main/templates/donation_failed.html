@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Donation Failure</title>
+        <style>
+              body {
+            font-family: Optima;
+             background-color: #f4f7fc;
+             margin: 0;
+             padding: 0;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+         }
+         .container {
+             background-color: #fff;
+             padding: 30px;
+             border-radius: 8px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+             border: 4px solid #4CAF50;
+             width: 100%;
+             max-width: 400px;
+             text-align: center;
+             margin-bottom: 20px;
+         }
+         h1 {
+             color: #4CAF50;
+         }
+         label {
+             font-size: 1.1em;
+             margin-bottom: 10px;
+             display: block;
+         }
+         input[type="text"], input[type="number"] {
+             width: 100%;
+             padding: 10px;
+             margin: 8px 0 20px 0;
+             border: 1px solid #ccc;
+             border-radius: 4px;
+             font-size: 1em;
+         }
+         button {
+             width: 100%;
+             padding: 12px;
+             background-color: #4CAF50;
+             border: none;
+             border-radius: 4px;
+             color: white;
+             font-size: 1.1em;
+             cursor: pointer;
+         }
+         button:hover {
+             background-color: #45a049;
+         }
+         .error {
+             color: red;
+             margin-bottom: 20px;
+         }
+         p {
+             font-size: 0.9em;
+             color: #555;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1> Donation has failed ❌</h1>
+            <h3>You are not elible to donate {{meal_count}} meal(s) and {{snack_count}} snack(s) : Amount ${{donation_total}}</h3>
+            <p> Your student balance is: ${{balance}}</p>
+        </div>
+        <img src="{{ url_for('static', filename='Sad_don.png')}}" alt="pic" width="420" height="300" >
+        <a href="javascript:history.back()">Go Back</a>
+
+       
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Action</title>
+  <style>
+    body {
+      font-family: Optima;
+      background-color: #f2f6fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    .rules {
+      background: #e9f5e9;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 4px solid #4CAF50;
+    }
+
+    .graphic {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .graphic img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="radio"] {
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 18px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Hello {{ username }}!</h2>
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form action="{{ url_for('student_action', username=username) }}" method="POST">
+      <label for="student_id">Enter your Student ID:</label>
+      <input type="text" name="student_id" id="student_id" required />
+
+      <div class="rules">
+        <h4>Rules</h4>
+        <p><strong>To DONATE a meal:</strong> Max amount you can donate is <strong>$50</strong> per day (2 meals or 5 snacks)</p>
+        <p><strong>To REQUEST a meal:</strong> First come, first served. A request for a meal is <strong>NOT</strong> always guaranteed. </p> 
+        <p>Please remember only up <strong>FOUR meal request per week</strong></p>
+      </div>
+
+      <div class="graphic">
+        <p><strong>Flexi Plan Guidelines:</strong></p>
+        <img src="{{ url_for('static', filename='lme_chart.png') }}" alt="Apartment Plan (LME)">
+        <img src="{{ url_for('static', filename='toler_chart.png') }}" alt="Standard Plan (Toler)">
+      </div>
+
+      <label>
+        <input type="checkbox" name="agree" required>
+        I agree to the rules above
+      </label>
+
+      <label>What would you like to do?</label>
+      <label><input type="radio" name="action" value="donate" required> I want to donate</label>
+      <label><input type="radio" name="action" value="request"> I want to request</label>
+
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+</body>
+</html>

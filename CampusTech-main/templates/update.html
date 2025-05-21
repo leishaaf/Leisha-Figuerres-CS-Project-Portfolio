@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Update</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2e7d32;
+            margin-top: 10px;
+        }
+
+        .btn-container {
+            margin-top: 25px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 8px 10px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hi {{ username }}!</h2>
+        <p>Student ID: <span class="highlight">{{ student_id }}</span></p>
+        <p>Building: <span class="highlight">{{ building }}</span></p>
+        <p>Your updated balance is: ${{ balance }}</p>
+
+        <p>{{ status }}</p>
+
+        <div class="btn-container">
+            <a href="{{ url_for('student_action', username=username) }}">⬅ Back to Actions</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <title> Donation Success !</title>
+    <style>
+         body {
+             font-family: Optima;
+             background-color: #f4f7fc;
+             margin: 0;
+             padding: 0;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+         }
+         .container {
+             background-color: #fff;
+             padding: 30px;
+             border-radius: 8px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+             width: 100%;
+             max-width: 800px;
+             text-align: center;
+             margin-bottom: 20px;
+         }
+
+         h2 {
+             color: #4CAF50;
+         }
+         label {
+             font-size: 1.1em;
+             margin-bottom: 10px;
+             display: block;
+         }
+         input[type="text"], input[type="number"] {
+             width: 100%;
+             padding: 10px;
+             margin: 8px 0 20px 0;
+             border: 1px solid #ccc;
+             border-radius: 4px;
+             font-size: 1em;
+         }
+         button {
+             width: 100%;
+             padding: 12px;
+             background-color: #4CAF50;
+             border: none;
+             border-radius: 4px;
+             color: white;
+             font-size: 1.1em;
+             cursor: pointer;
+         }
+         button:hover {
+             background-color: #45a049;
+         }
+         .error {
+             color: red;
+             margin-bottom: 20px;
+         }
+         p {
+             font-size: 0.9em;
+             color: #555;
+         }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1> Congratulations! You've successfully donated! </h1>
+        <h1> ✨🎉 🧚🧚🧚 🎉✨</h1>
+        <h2> You have donated a total of ${{donation_total}}</h2>
+        <h3> {{meal_count}} meal(s) and {{snack_count}} snack(s)</h3>
+        <p> Your previous balance was: ${{balance}} and your new balance is: ${{new_balance}}</p>
+        <img src="{{ url_for('static', filename='Thanks_You.png')}}" alt="Pic" width="400" height="400" style="border: 5px solid green;" >
+    </div>
+</body>
+</html>

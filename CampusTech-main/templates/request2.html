@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        label {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            margin-bottom: 20px;
+        }
+        .status-message {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        .eligible {
+            color: green;
+        }
+        .ineligible {
+            color: red;
+        }
+        p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+ </head>
+ <body>
+    <h1>Welcome {{ username }}!</h1>
+    <h4>Student ID: {{ student_id }}</h4>
+    <p>Building: {{ building}} </p>
+    <p>Mounth: {{ mounth}} </p>
+    <p>Current Balance: ${{ balance }} </p>
+    <p>Required Balance: ${{ threshold}} </p>
+
+    {% if eligible %} 
+        <div class="status-message eligible">
+            You are eligible to request a meal/snack! 
+            </div>
+    {% else %}
+
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome {{ username }}!</h2>
+        <p>Student ID: {{ student_id }}</p>
+
+        <p>Building: {{ building }}</p>
+        <p>Month: {{ month }}</p>
+        <p>Current Balance: ${{ balance }}</p>
+        <p>Required Balance: ${{ threshold }}</p>
+        
+        {% if eligible %}
+
+            <div class="status-message eligible">
+                You are not eligible to request at this time. 
+            </div>
+    {% endif %}
+
+    {% if eligible %}
+    {% if success_message %}
+        <div class="status-message eligible">
+            {{ success_message}}
+        </div>
+
+    {% endif %} 
+
+
+    <p> If you'd like to go back, <a href="{{ url_for('student_action', username=username) }}">return to your action</a>.</p>
+
+        <h3>Request Assistance</h3>
+        <form method="POST">
+            <label for="request_details">Please provide your request details:</label><br>
+            <textarea name="request_details" rows="4" required placeholder="Enter your request details here..."></textarea><br><br>
+
+
+            <button type="submit">Submit Request</button>
+        </form>
+        <p>If you'd like to go back, <a href="{{ url_for('student_action', username=username) }}">return to your actions</a>.</p>
+
+    </div>
+
+</body>
+</html>
+

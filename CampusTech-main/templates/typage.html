@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Submitted</title>
+    <style>
+        body {
+            font-family: Optima, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .queue-position {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Thank you for your request!</h2>
+        <p>You have been added to the processing queue.</p>
+        <p class="queue-position">You are currently #{{ queue_position }} in line.</p>
+        <p>You will be notified once your request is processed and your student balance is updated.</p>
+        <a href="{{ url_for('update', username=username, student_id=student_id, building=building, balance=balance) }}">Click Here to check your balance</a>
+        <a href="{{ url_for('student_action', username=username) }}">Return to your actions</a>
+ </div>
+</body>
+</html>

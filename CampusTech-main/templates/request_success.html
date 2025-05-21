@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Submitted</title>
+    <style>
+        body {
+            font-family: Optima, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 1em;
+            margin: 10px 0;
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✅ Thank You for Your Request!</h2>
+        <p>You have been added to the queue for a <strong>${{ amount }}</strong> <strong>{{ request_type }}</strong>.</p>
+        <p>Your current position in the queue is: <strong>#{{ position }}</strong></p>
+        <p>We will notify you when your request is processed and your student balance is updated.</p>
+        <p>Old Balance: ${{ old_balance }}</p>
+        <p>New Balance: ${{ new_balance }}</p>
+        <a href="{{ url_for('student_action', username=username) }}">Click here to return to your action page</a>
+    </div>
+</body>
+</html>
+
