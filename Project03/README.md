@@ -8,4 +8,4 @@ Here is a list of the following commands you can enter through scanner:
 - rm filename: removes the file with the given name from the current directory
 - mkdir dirName: creates a new directory of the given name
 - rmdir dirName: removes the directory and all its contents from the current directory if it exists
-- cd dirName: changes into the given directory if it is in the current directory we're in. if dirName = "/", goes to root dir of file sys.  if dirName = "..", we cd into the parent of current dir.  reports an error otherwise.
+- cd dirName: changes into the given directory if it is in the current directory we're in. If dirName = "/", goes to root dir of file sys.  If dirName = "..", we cd into the parent of current dir.  reports an error otherwise.
