@@ -1,5 +1,5 @@
 ## Sorting
-For this project, I implemented several sorting algorithms:
+For this project, I implemented several sorting algorithms in Java:
 - Bucket sort
 - Heap sort
 - Randomized quick sort
