@@ -15,7 +15,7 @@ What I’m Currently Working On
 - Exploring more about APIs, database integration, and collaborative tools  
 
 Languages & Tools  
-- Backend: Python (Flask), Java, Node.js (learning)    
+- Backend: Python (Flask), Java, Node.js    
 - Frontend: HTML, CSS, JavaScript (learning React)  
 
 Email: leisha.figuerres@yahoo.com  
