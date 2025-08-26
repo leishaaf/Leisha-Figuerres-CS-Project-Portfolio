@@ -5,16 +5,18 @@ Currently open to remote, hybrid opportunities, or on site opportunites — espe
 
 Here is a portfolio of some projects I've worked on during my Computer Science career. 
   
-What I’m Working On  
-Learning React and Node.js by building my own full-stack projects  
+What I’m Currently Working On  
+- Growing my skills by building my own full-stack projects outside of school using tools I learned in a recent internship
+  
+- In my curriculum, currently learning GO and C
 
-Diving deeper into ethical AI, human-centered design, and experimental tech  
+- Diving deeper into ethical AI, human-centered design, and experimental tech  
 
-Exploring more about APIs, database integration, and collaborative tools  
+- Exploring more about APIs, database integration, and collaborative tools  
 
-🛠️ Languages & Tools  
-Backend: Python (Flask), Java, Node.js (learning)    
-Frontend: HTML, CSS, JavaScript (learning React)  
+Languages & Tools  
+- Backend: Python (Flask), Java, Node.js (learning)    
+- Frontend: HTML, CSS, JavaScript (learning React)  
 
 Email: leisha.figuerres@yahoo.com  
 LinkedIn: www.linkedin.com/in/leisha-figuerres-862096347
