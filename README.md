@@ -1,7 +1,7 @@
 Hello, my name is Leisha Figuerres!  
 I am a 3rd majoring in Computer Science at the University of San Francisco.  
-Aspiring full-stack software engineer with a strong foundation in backend development and a growing passion for frontend and UX/UI.  
-Currently open to remote, hybrid opportunities, or on site opportunites — especially ones that value ethical tech, creativity, and experimentation.    
+- Aspiring full-stack software engineer with a strong foundation in backend development and a growing passion for frontend and UX/UI.  
+- Currently open to remote, hybrid opportunities, or on site opportunites — especially ones that value ethical tech, creativity, and experimentation.    
 
 Here is a portfolio of some projects I've worked on during my Computer Science career. 
   
