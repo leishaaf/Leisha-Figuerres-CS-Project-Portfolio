@@ -1,0 +1,16 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X-----Fs------Fs------Fs------s---Fs-----Fs------Fs------s----Fs-----s---Fs---X
+X---Fs----Fs-----s-----Fs------Fs------s------Fs------Fs------s------Fs------sX
+X--Fs------Fs------s-----Fs------s------Fs------Fs------s-----Fs------Fs------X
+Xs------Fs------s------Fs------Fs------s-----XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XF------Fs------Fs------s------Fs------Fs------s-----Fs------Fs------s------FsX
+X----Fs------Fs------s------Fs------Fs------s------Fs------Fs------s------Fs--X
+Xs------Fs------Fs------s------Fs------Fs------s------Fs------Fs------s------FX
+XF------Fs------Fs------s------Fs------Fs------s------Fs------Fs------s------FX
+X-----Fs------Fs------s------Fs------Fs------s------Fs------Fs------s------Fs-X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX----Fs------s---------s------Fs----X
+Xs------Fs------Fs------s------Fs------Fs------s------Fs------Fs------s------FX
+XF------Fs------Fs------s------Fs------Fs------s------Fs------Fs------s------FX
+X-----Fs------Fs------s------Fs------Fs------s------Fs------Fs------s------Fs-X
+X--Fs------Fs------s------Fs------Fs------s------Fs------Fs------s------Fs----X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

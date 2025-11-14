@@ -1,0 +1,12 @@
+XXXXXXXXXXXXXXXXXX
+X-----s-------F--X
+X---F---s---s----X
+X--------F-------X
+X--XXX------s----X
+X------s----s-ss-X
+X--s-------F-----X
+X----s------s---sX
+X------F---------X
+XXXXXXXXXXXXXXXXXX
+
+

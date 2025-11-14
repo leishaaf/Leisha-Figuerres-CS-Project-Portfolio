@@ -1,0 +1,11 @@
+XXXXXXXXXXXXXXXXXX
+X--s------F-----sX
+X--F--s----s-F---X
+X----XX----Z-----X  
+X--s-----F-------XXXX
+X----s------s----X
+X--XX---F----XX--X
+X--s------@--s-
+X--F----s--------X
+XXXXXXXXXXXXXXXXXX
+
