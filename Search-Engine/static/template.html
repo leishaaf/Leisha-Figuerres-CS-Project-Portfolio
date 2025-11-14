@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Results</title>
+    </head>
+    <body>
+        <ol>
+            {{range .}}
+                <li><a href="{{.DocName}}">{{.DocTitle}}</a></li>
+            {{end}}
+        </ol>
+    </body>
+</html>

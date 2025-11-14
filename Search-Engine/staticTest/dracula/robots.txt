@@ -1,0 +1,5 @@
+# Lab05 robots.txt
+
+User-agent: *
+Disallow: *chap21.html
+Crawl-delay: 1
