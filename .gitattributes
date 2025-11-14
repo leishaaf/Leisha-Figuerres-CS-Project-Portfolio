@@ -1,0 +1,9 @@
+# Ignore all files in static/ from language stats
+/static/* linguist-vendored
+
+# Ignore HTML templates if you want
+*.html linguist-vendored
+
+# Optionally ignore JS/CSS libraries too
+*.js linguist-vendored
+*.css linguist-vendored
